@@ -1,6 +1,4 @@
-<% if User.current.allowed_to?(:upload_own_avatar, nil, global: true) %>
-  <p>
-    <label>Intranet-Profilbild</label>
-    <%= link_to 'Bild hochladen', my_avatar_path %>
-  </p>
-<% end %>
+<p>
+  <label>Intranet-Profilbild</label>
+  <%= link_to 'Bild hochladen', my_avatar_path %>
+</p>

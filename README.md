@@ -6,5 +6,5 @@ auf einem gemounteten Pfad mit Benutzernamen ablegen können.
 ## Funktionen
 
 - Upload eines JPEGs über die **„Mein Konto“**-Seite
-- Speicherung mit festem Dateinamen (`<username>.jpeg`)
+- Speicherung mit festem Dateinamen (`<username>.jpg`)
 - Ablage unter `/mnt/redmine_avatars`

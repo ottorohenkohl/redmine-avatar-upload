@@ -1,6 +1,5 @@
 class AvatarUploadController < ApplicationController
   before_action :require_login
-  before_action :authorize
 
   SHARE_ROOT = '/mnt/redmine_avatars'.freeze
 
