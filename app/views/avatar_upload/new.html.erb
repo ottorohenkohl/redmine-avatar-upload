@@ -1,0 +1,10 @@
+<h2>JPEG hochladen</h2>
+
+<%= form_tag('/my/jpeg', multipart: true) do %>
+  <p>
+    <label>JPEG auswählen:</label><br>
+    <%= file_field_tag :jpeg, accept: 'image/jpeg' %>
+  </p>
+  <%= submit_tag 'Hochladen' %>
+<% end %>
+

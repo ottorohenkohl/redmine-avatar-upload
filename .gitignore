@@ -1,0 +1,7 @@
+.DS_Store
+
+tmp/**/*
+log/*.log
+config/database.yml
+.idea
+deploy.sh
