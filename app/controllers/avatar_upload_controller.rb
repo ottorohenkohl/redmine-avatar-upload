@@ -3,8 +3,8 @@ class AvatarUploadController < ApplicationController
 
   SHARE_ROOT = '/mnt/redmine_avatars'.freeze
 
-  MAX_BYTES_MiB  = 5
-  MAX_BYTES  = MAX_BYTES_MiB * 1024 * 1024
+  MAX_BYTES_MiB = 5
+  MAX_BYTES = MAX_BYTES_MiB * 1024 * 1024
 
   def new
   end
@@ -52,13 +52,5 @@ class AvatarUploadController < ApplicationController
     flash[:notice] = "Das Profilbild wurde gespeichert, aber die Übernahme dauert unter Umständen einen Moment."
 
     redirect_to action: :new
-  end
-
-  private
-
-  def authorize(ctrl = params[:controller], action = params[:action], global = false)
-    allowed = User.current.allowed_to?(:upload_own_jpeg, nil, global: true)
-
-    render_403 unless allowed
   end
 end
