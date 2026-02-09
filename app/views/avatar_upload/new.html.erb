@@ -1,10 +1,11 @@
-<h2>JPEG hochladen</h2>
+<fieldset>
+  <legend>Profilbild für's Intranet Aktualisieren</legend>
 
-<%= form_tag('/my/jpeg', multipart: true) do %>
-  <p>
-    <label>JPEG auswählen:</label><br>
-    <%= file_field_tag :jpeg, accept: 'image/jpeg' %>
-  </p>
-  <%= submit_tag 'Hochladen' %>
-<% end %>
-
+  <%= form_tag('/my/avatar', multipart: true) do %>
+    <p>
+      <label>JPEG auswählen:</label>
+      <%= file_field_tag :jpeg, accept: 'image/jpeg' %>
+    </p>
+    <%= submit_tag 'Hochladen' %>
+  <% end %>
+</fieldset>
