@@ -33,8 +33,8 @@ class AvatarUploadController < ApplicationController
 
     io.rewind
 
-    dest_path = File.join(SHARE_ROOT, "#{User.current.login.to_s}.jpeg")
-    tmp_path = File.join(SHARE_ROOT, ".#{User.current.login.to_s}.jpeg.uploading-#{Process.pid}-#{SecureRandom.hex(6)}")
+    dest_path = File.join(SHARE_ROOT, "#{User.current.login.to_s}.jpg")
+    tmp_path = File.join(SHARE_ROOT, ".#{User.current.login.to_s}.jpg.uploading-#{Process.pid}-#{SecureRandom.hex(6)}")
 
     begin
       File.open(tmp_path, 'wb', 0o660) do |out|
