@@ -34,7 +34,7 @@ class AvatarUploadController < ApplicationController
     io.rewind
 
     dest_path = File.join(SHARE_ROOT, "#{User.current.login.to_s}.jpeg")
-    tmp_path = File.join(SHARE_ROOT, ".#{safe}.jpeg.uploading-#{Process.pid}-#{SecureRandom.hex(6)}")
+    tmp_path = File.join(SHARE_ROOT, ".#{User.current.login.to_s}.jpeg.uploading-#{Process.pid}-#{SecureRandom.hex(6)}")
 
     begin
       File.open(tmp_path, 'wb', 0o660) do |out|
@@ -50,7 +50,7 @@ class AvatarUploadController < ApplicationController
       return render_error message: "Speichern fehlgeschlagen: #{e.class}: #{e.message}"
     end
 
-    flash[:notice] = "Das Profilbild wurde gespeichert, aber die die Übernahme dauert unter Umständen einen Moment."
+    flash[:notice] = "Das Profilbild wurde gespeichert, aber die Übernahme dauert unter Umständen einen Moment."
 
     redirect_to action: :new
   end
